@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hypostratège — Courtiers hypothécaires | Accompagnement humain et éclairé</title>
+  <meta name="description" content="Hypostratège, votre équipe de courtiers hypothécaires. Achat, renouvellement, refinancement et investissement immobilier. Un accompagnement humain, transparent et sur mesure." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ===== EN-TÊTE ===== -->
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <span class="brand__mark">H</span>
+        <span class="brand__name">Hypostratège<small>Courtiers hypothécaires</small></span>
+      </a>
+      <button class="nav__toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul class="nav__links">
+        <li><a href="index.html" class="is-active">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="notre-equipe.html">Notre équipe</a></li>
+        <li><a href="avis-clients.html">Avis clients</a></li>
+        <li><a href="nous-joindre.html">Nous joindre</a></li>
+        <li class="nav__cta"><a href="nous-joindre.html" class="btn btn--gold">Consultation gratuite</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ===== HÉRO ===== -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__content">
+        <span class="hero__badge">★ Partenaire de plus de 20 institutions financières</span>
+        <h1>Un accompagnement <em>éclairé</em> pour des projets immobiliers solides</h1>
+        <p>Hypostratège rend le monde hypothécaire plus humain, accessible et rassurant. Nous négocions pour vous les meilleures conditions, en toute transparence.</p>
+        <div class="hero__actions">
+          <a href="services.html" class="btn btn--ghost-light">Découvrir nos services</a>
+          <a href="tel:+15147143411" class="btn btn--ghost-light">☎ 514 714-3411</a>
+        </div>
+      </div>
+
+      <!-- Formulaire rapide : conversion directe depuis l'accueil -->
+      <div class="hero-form">
+        <h3>Consultation gratuite</h3>
+        <p class="hero-form__sub">Laissez vos coordonnées : un courtier vous rappelle rapidement. Sans engagement.</p>
+        <div class="form__success">✅ Merci ! Votre demande est reçue. Un courtier vous recontacte très bientôt.</div>
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <!-- ⬇️ COLLEZ ICI VOTRE CLÉ WEB3FORMS (gratuite, voir README étape 2) -->
+          <input type="hidden" name="access_key" value="VOTRE_CLE_WEB3FORMS" />
+          <input type="hidden" name="subject" value="Nouvelle demande de consultation — Hypostratège" />
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+          <div class="field">
+            <label for="hf-prenom">Prénom</label>
+            <input type="text" id="hf-prenom" name="prenom" required />
+          </div>
+          <div class="field">
+            <label for="hf-tel">Téléphone</label>
+            <input type="tel" id="hf-tel" name="telephone" required />
+          </div>
+          <div class="field">
+            <label for="hf-courriel">Courriel</label>
+            <input type="email" id="hf-courriel" name="courriel" required />
+          </div>
+          <button type="submit" class="btn btn--gold"
+            onclick="if(this.form.access_key.value.indexOf('VOTRE_CLE')!==-1){window.location.href='mailto:emeric.bergevin@hotmail.com?subject=Consultation%20gratuite&body='+encodeURIComponent('Prénom: '+document.getElementById('hf-prenom').value+'\nTéléphone: '+document.getElementById('hf-tel').value+'\nCourriel: '+document.getElementById('hf-courriel').value);return false;}">
+            Obtenir ma consultation gratuite
+          </button>
+          <p class="form__note">🔒 Vos informations restent confidentielles.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="text-center" style="max-width:720px;margin:0 auto 46px;">
+        <span class="eyebrow">Nos services</span>
+        <h2>Une solution pour chaque étape de votre projet</h2>
+        <p class="lead mx-auto">Que vous achetiez, renouveliez ou investissiez, nous bâtissons une stratégie adaptée à votre réalité.</p>
+      </div>
+      <div class="grid grid--3">
+        <div class="card">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></div>
+          <h3>Nouvel achat</h3>
+          <p>Acheter une première propriété peut sembler intimidant. Nous vous guidons de la préapprobation jusqu'à la signature, une étape à la fois.</p>
+          <a href="services.html" class="card__link">En savoir plus →</a>
+        </div>
+        <div class="card">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4v6h6"/><path d="M20 20v-6h-6"/><path d="M4 10a8 8 0 0 1 14-3M20 14a8 8 0 0 1-14 3"/></svg></div>
+          <h3>Renouvellement</h3>
+          <p>Ne renouvelez pas les yeux fermés. Nous analysons le marché et négocions pour maximiser vos économies, sans surprise.</p>
+          <a href="services.html" class="card__link">En savoir plus →</a>
+        </div>
+        <div class="card">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <h3>Refinancement</h3>
+          <p>Consolider des dettes, financer un projet ou libérer de l'équité : nous évaluons vos options avec rigueur et transparence.</p>
+          <a href="services.html" class="card__link">En savoir plus →</a>
+        </div>
+        <div class="card">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+          <h3>Investissement immobilier</h3>
+          <p>Stratégies avancées, dont la manœuvre Smith, pour optimiser la croissance de votre patrimoine de façon structurée.</p>
+          <a href="services.html" class="card__link">En savoir plus →</a>
+        </div>
+        <div class="card">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M8 4v16"/></svg></div>
+          <h3>Taux hypothécaires</h3>
+          <p>Accès transparent aux taux du marché et explication des produits (fixe, variable, ouvert, fermé) pour décider en toute confiance.</p>
+          <a href="services.html" class="card__link">En savoir plus →</a>
+        </div>
+        <div class="card" style="background:linear-gradient(135deg,var(--royal),var(--royal-light));border:0;color:#fff;">
+          <div class="card__icon" style="background:rgba(255,255,255,.12);border-color:rgba(200,162,75,.5);color:var(--gold-light);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+          <h3 style="color:#fff;">Une question ?</h3>
+          <p style="color:#D4DEF0;">Parlons de votre projet. La première consultation est gratuite et sans engagement.</p>
+          <a href="nous-joindre.html" class="card__link" style="color:var(--gold-light);">Nous joindre →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== À PROPOS (split) ===== -->
+  <section class="section section--cloud">
+    <div class="container split">
+      <div class="split__media">
+        <!-- Remplacez par une photo : <img src="assets/images/equipe.jpg" alt="L'équipe Hypostratège"> -->
+        <svg viewBox="0 0 24 24" width="80" height="80" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <div>
+        <span class="eyebrow">À propos</span>
+        <h2>Le courtage hypothécaire, à visage humain</h2>
+        <p>Chez Hypostratège, vous n'êtes jamais un numéro de dossier. Notre équipe met son expérience combinée au service d'un accompagnement personnalisé, où vous vous sentez guidé, écouté et soutenu à chaque étape.</p>
+        <ul class="list-check">
+          <li>Accès à plus de 20 prêteurs, un seul interlocuteur</li>
+          <li>Des conseils transparents, sans jargon inutile</li>
+          <li>Un service gratuit pour vous, financé par le prêteur</li>
+          <li>Encadrés par l'Autorité des marchés financiers (AMF)</li>
+        </ul>
+        <a href="a-propos.html" class="btn btn--royal" style="margin-top:10px;">Découvrir notre approche</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATISTIQUES ===== -->
+  <section class="section section--royal section--tight">
+    <div class="container">
+      <div class="stats">
+        <div><div class="stat__num">20+</div><div class="stat__label">Institutions financières partenaires</div></div>
+        <div><div class="stat__num">100 %</div><div class="stat__label">Service gratuit et sans engagement</div></div>
+        <div><div class="stat__num">AMF</div><div class="stat__label">Courtiers encadrés et certifiés</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRÊTEURS ===== -->
+  <section class="section section--tight">
+    <div class="container text-center">
+      <span class="eyebrow">Notre réseau</span>
+      <h2>Nous magasinons parmi les meilleurs prêteurs</h2>
+      <p class="lead mx-auto" style="margin-bottom:34px;">Banques, coopératives et prêteurs alternatifs : nous comparons pour vous.</p>
+      <div class="logos">
+        <span>TD</span><span>Banque Nationale</span><span>Scotia</span><span>Desjardins</span>
+        <span>CIBC</span><span>MCAP</span><span>First National</span><span>Equitable Bank</span>
+        <span>RFA</span><span>B2B Banque</span><span>+ plusieurs autres</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TAUX ===== -->
+  <section class="section section--cloud" id="taux">
+    <div class="container">
+      <div class="text-center" style="max-width:700px;margin:0 auto 44px;">
+        <span class="eyebrow">Taux hypothécaires</span>
+        <h2>Le marché en un coup d'œil, et nos taux pour vous</h2>
+        <p class="lead mx-auto">À titre indicatif seulement. Contactez-nous pour une offre personnalisée selon votre dossier.</p>
+      </div>
+
+      <!-- Taux de référence du marché — mis à jour automatiquement (Banque du Canada) -->
+      <p class="rate-block-title">Taux de référence du marché</p>
+      <div class="rate-chips">
+        <div class="rate-chip"><span class="rate-chip__label">Taux préférentiel</span><span class="rate-chip__value" data-marche="prime">4,45 %</span></div>
+        <div class="rate-chip"><span class="rate-chip__label">Conventionnel 5 ans (affiché)</span><span class="rate-chip__value" data-marche="conventionnel_5ans">6,09 %</span></div>
+        <div class="rate-chip"><span class="rate-chip__label">Obligation 5 ans</span><span class="rate-chip__value" data-marche="obligation_5ans">3,14 %</span></div>
+      </div>
+      <p class="rate-source" id="rate-marche-source">Taux de référence — Banque du Canada.</p>
+
+      <!-- Nos taux négociés — lus dans le Google Sheet (modifiable sans code) -->
+      <p class="rate-block-title" style="margin-top:44px;">Nos taux négociés</p>
+      <table class="rates">
+        <thead>
+          <tr><th>Terme</th><th>Type</th><th>Notre taux à partir de*</th></tr>
+        </thead>
+        <tbody id="rates-body">
+          <tr><td>3 ans</td><td>Fixe fermé</td><td><strong>—</strong></td></tr>
+          <tr><td>5 ans</td><td>Fixe fermé</td><td><strong>—</strong></td></tr>
+          <tr><td>5 ans</td><td>Variable fermé</td><td><strong>—</strong></td></tr>
+        </tbody>
+      </table>
+      <p class="rate-source" id="rate-taux-source"></p>
+      <p class="rates-note">*Taux fournis à titre indicatif, sujets à changement sans préavis et selon l'admissibilité. Certaines conditions s'appliquent. Communiquez avec nous pour une soumission personnalisée.</p>
+    </div>
+  </section>
+
+  <!-- ===== TÉMOIGNAGES ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:40px;">
+        <span class="eyebrow">Avis clients</span>
+        <h2>Ce que nos clients disent de nous</h2>
+      </div>
+      <div class="grid grid--3">
+        <div class="quote"><div class="quote__stars">★★★★★</div><p>« Exemple de témoignage. Remplacez ce texte par un véritable avis client. »</p><div class="quote__author">— Prénom N.</div></div>
+        <div class="quote"><div class="quote__stars">★★★★★</div><p>« Exemple de témoignage. Remplacez ce texte par un véritable avis client. »</p><div class="quote__author">— Prénom N.</div></div>
+        <div class="quote"><div class="quote__stars">★★★★★</div><p>« Exemple de témoignage. Remplacez ce texte par un véritable avis client. »</p><div class="quote__author">— Prénom N.</div></div>
+      </div>
+      <div class="text-center" style="margin-top:34px;"><a href="avis-clients.html" class="btn btn--ghost">Voir tous les avis</a></div>
+    </div>
+  </section>
+
+  <!-- ===== CTA FINAL ===== -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="cta-band">
+        <span class="eyebrow" style="color:var(--gold-light);">Sans engagement</span>
+        <h2>Prêt à discuter de votre projet ?</h2>
+        <p>Obtenez une consultation gratuite avec un courtier de l'équipe Hypostratège. Ce formulaire ne vous engage à rien.</p>
+        <div style="margin-top:22px;"><a href="nous-joindre.html" class="btn btn--gold">Planifier ma consultation</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PIED DE PAGE ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand"><span class="brand__mark">H</span><span class="brand__name">Hypostratège<small>Courtiers hypothécaires</small></span></a>
+          <p style="margin-top:16px;max-width:34ch;">Un accompagnement humain et transparent pour tous vos projets hypothécaires.</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="notre-equipe.html">Notre équipe</a></li>
+            <li><a href="avis-clients.html">Avis clients</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Nouvel achat</a></li>
+            <li><a href="services.html">Renouvellement</a></li>
+            <li><a href="services.html">Refinancement</a></li>
+            <li><a href="services.html">Investissement</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Nous joindre</h4>
+          <ul>
+            <li><a href="tel:+15147143411">514 714-3411</a></li>
+            <li><a href="mailto:mlepage@planipret.com">mlepage@planipret.com</a></li>
+            <li>425, avenue Mathers, bureau 102<br>Saint-Eustache (Québec) J7P 4C1</li>
+            <li><a href="nous-joindre.html">Formulaire de contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-disclaimer">Hypostratège est une équipe de courtiers hypothécaires encadrés par l'Autorité des marchés financiers (AMF). Le courtage hypothécaire est offert par l'entremise de PlaniPrêt. Les taux affichés sont fournis à titre indicatif et peuvent changer sans préavis.</p>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> Hypostratège. Tous droits réservés.</span>
+        <span>Conçu au Québec</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/rates.js"></script>
+</body>
+</html>

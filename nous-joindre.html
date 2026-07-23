@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nous joindre — Hypostratège Courtiers hypothécaires</title>
+  <meta name="description" content="Contactez l'équipe Hypostratège pour une consultation gratuite et sans engagement. Remplissez le formulaire et un courtier vous rappelle rapidement." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand"><span class="brand__mark">H</span><span class="brand__name">Hypostratège<small>Courtiers hypothécaires</small></span></a>
+      <button class="nav__toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul class="nav__links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="notre-equipe.html">Notre équipe</a></li>
+        <li><a href="avis-clients.html">Avis clients</a></li>
+        <li><a href="nous-joindre.html" class="is-active">Nous joindre</a></li>
+        <li class="nav__cta"><a href="nous-joindre.html" class="btn btn--gold">Consultation gratuite</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Accueil</a> / Nous joindre</div>
+      <h1>Planifiez votre consultation gratuite</h1>
+      <p>Remplissez le formulaire et un courtier de l'équipe vous recontacte rapidement. Ce formulaire ne vous engage à rien.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split" style="align-items:flex-start;">
+
+      <!-- ===== FORMULAIRE ===== -->
+      <div>
+        <!--
+          IMPORTANT — Pour recevoir les soumissions par courriel (site statique, sans serveur) :
+          1. Créez un compte gratuit sur https://formspree.io
+          2. Créez un formulaire ; copiez votre ID (ex : xayzbwqk).
+          3. Remplacez VOTRE_ID_FORMSPREE ci-dessous par cet ID.
+          Tant que ce n'est pas fait, le bouton bascule sur le courriel de secours (mailto).
+        -->
+        <div class="form__success">✅ Merci ! Votre demande a bien été envoyée. Un courtier vous recontactera rapidement.</div>
+        <form id="contact-form" class="form" action="https://api.web3forms.com/submit" method="POST">
+          <!-- ⬇️ COLLEZ ICI VOTRE CLÉ WEB3FORMS (gratuite, voir README étape 2) -->
+          <input type="hidden" name="access_key" value="VOTRE_CLE_WEB3FORMS" />
+          <input type="hidden" name="subject" value="Nouvelle demande — formulaire de contact Hypostratège" />
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+          <div class="row">
+            <div class="field">
+              <label for="prenom">Prénom *</label>
+              <input type="text" id="prenom" name="prenom" required />
+            </div>
+            <div class="field">
+              <label for="nom">Nom *</label>
+              <input type="text" id="nom" name="nom" required />
+            </div>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="tel">Téléphone *</label>
+              <input type="tel" id="tel" name="telephone" required />
+            </div>
+            <div class="field">
+              <label for="courriel">Courriel *</label>
+              <input type="email" id="courriel" name="courriel" required />
+            </div>
+          </div>
+          <div class="field">
+            <label for="sujet">Votre projet</label>
+            <select id="sujet" name="sujet">
+              <option value="Nouvel achat">Nouvel achat</option>
+              <option value="Renouvellement">Renouvellement hypothécaire</option>
+              <option value="Refinancement">Refinancement</option>
+              <option value="Investissement">Investissement immobilier</option>
+              <option value="Autre">Autre / je ne sais pas encore</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Message (facultatif)</label>
+            <textarea id="message" name="message" placeholder="Parlez-nous de votre projet..."></textarea>
+          </div>
+          <!-- Redirection de secours si Formspree n'est pas encore configuré -->
+          <button type="submit" class="btn btn--gold"
+            onclick="if(this.form.access_key.value.indexOf('VOTRE_CLE')!==-1){window.location.href='mailto:emeric.bergevin@hotmail.com?subject=Demande%20de%20consultation&body='+encodeURIComponent('Prénom: '+prenom.value+'\nNom: '+nom.value+'\nTéléphone: '+tel.value+'\nCourriel: '+courriel.value+'\nProjet: '+sujet.value+'\n\n'+message.value);return false;}">
+            Envoyer ma demande
+          </button>
+          <p class="form__note">🔒 Vos informations restent confidentielles. Ce formulaire ne vous engage à rien.</p>
+        </form>
+      </div>
+
+      <!-- ===== COORDONNÉES ===== -->
+      <div>
+        <span class="eyebrow">Coordonnées</span>
+        <h2>Parlons de votre projet</h2>
+        <p>Une vraie personne vous répond — jamais un robot. Nous vous recontactons rapidement pour amorcer la conversation, en toute simplicité.</p>
+
+        <div class="contact-block" style="margin-top:26px;">
+          <div class="contact-line">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div><strong>Bureau</strong><br>425, avenue Mathers, bureau 102<br>Saint-Eustache (Québec) J7P 4C1</div>
+          </div>
+          <div class="contact-line">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+            <div>
+              <strong>Nos courtiers</strong><br>
+              Matis Léger — <a href="tel:+15146917488">514 691-7488</a> · <a href="mailto:mleger@planipret.com">mleger@planipret.com</a><br>
+              Adam Massé — <a href="tel:+15146633411">514 663-3411</a> · <a href="mailto:adammasse@planipret.com">adammasse@planipret.com</a><br>
+              Marie-Josée Lepage — <a href="tel:+15147143411">514 714-3411</a> · <a href="mailto:mlepage@planipret.com">mlepage@planipret.com</a>
+            </div>
+          </div>
+          <div class="contact-line">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 8 6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></svg>
+            <div><strong>Langue de service</strong><br>Français</div>
+          </div>
+          <div class="contact-line">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <div><strong>Heures d'ouverture</strong><br>Lun. – Ven. : 9 h à 18 h<br>Sam. : sur rendez-vous</div>
+          </div>
+        </div>
+
+        <!--
+          Option « prendre rendez-vous en ligne » :
+          Créez un compte gratuit Calendly (calendly.com), puis collez ici le code d'intégration.
+          Exemple :
+          <div class="calendly-inline-widget" data-url="https://calendly.com/votre-compte" style="min-width:320px;height:630px;"></div>
+          <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        -->
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand"><span class="brand__mark">H</span><span class="brand__name">Hypostratège<small>Courtiers hypothécaires</small></span></a>
+          <p style="margin-top:16px;max-width:34ch;">Un accompagnement humain et transparent pour tous vos projets hypothécaires.</p>
+        </div>
+        <div><h4>Navigation</h4><ul><li><a href="index.html">Accueil</a></li><li><a href="services.html">Services</a></li><li><a href="a-propos.html">À propos</a></li><li><a href="notre-equipe.html">Notre équipe</a></li><li><a href="avis-clients.html">Avis clients</a></li></ul></div>
+        <div><h4>Services</h4><ul><li><a href="services.html">Nouvel achat</a></li><li><a href="services.html">Renouvellement</a></li><li><a href="services.html">Refinancement</a></li><li><a href="services.html">Investissement</a></li></ul></div>
+        <div><h4>Nous joindre</h4><ul><li><a href="tel:+15147143411">514 714-3411</a></li><li><a href="mailto:mlepage@planipret.com">mlepage@planipret.com</a></li><li>425, avenue Mathers, bureau 102<br>Saint-Eustache (Québec) J7P 4C1</li><li><a href="nous-joindre.html">Formulaire de contact</a></li></ul></div>
+      </div>
+      <p class="footer-disclaimer">Hypostratège est une équipe de courtiers hypothécaires encadrés par l'Autorité des marchés financiers (AMF). Le courtage hypothécaire est offert par l'entremise de PlaniPrêt. Les taux affichés sont fournis à titre indicatif et peuvent changer sans préavis.</p>
+      <div class="footer-bottom"><span>© <span id="year">2026</span> Hypostratège. Tous droits réservés.</span><span>Conçu au Québec</span></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
