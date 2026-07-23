@@ -9,15 +9,15 @@ prêt à être hébergé gratuitement sur **GitHub Pages** et branché sur votre
 
 ```
 hypostratege/
-├── index.html            → Accueil
-├── services.html         → Services
-├── a-propos.html         → À propos
-├── notre-equipe.html     → Notre équipe (3 membres)
-├── marie-josee-lepage.html → Page profil de Marie-Josée Lepage
-├── matis-leger.html      → Page profil de Matis Léger
-├── adam-masse.html       → Page profil d'Adam Massé
-├── avis-clients.html     → Avis clients
-├── nous-joindre.html     → Contact + formulaire
+├── index.html                      → Accueil            (/)
+├── services/index.html             → Services           (/services/)
+├── a-propos/index.html             → À propos           (/a-propos/)
+├── notre-equipe/index.html         → Notre équipe       (/notre-equipe/)
+├── marie-josee-lepage/index.html   → Profil M.-J.       (/marie-josee-lepage/)
+├── matis-leger/index.html          → Profil Matis       (/matis-leger/)
+├── adam-masse/index.html           → Profil Adam        (/adam-masse/)
+├── avis-clients/index.html         → Avis clients       (/avis-clients/)
+├── nous-joindre/index.html         → Contact            (/nous-joindre/)
 ├── css/styles.css        → Tous les styles (couleurs, mise en page)
 ├── js/main.js            → Menu mobile + envoi du formulaire
 ├── js/rates.js           → Affichage des taux (marché + votre Google Sheet)
@@ -63,10 +63,10 @@ Chez Web3Forms, **c'est la clé qui détermine le destinataire**, pas le HTML. I
 | Page | Destinataire | Marqueur à remplacer |
 |------|--------------|----------------------|
 | `index.html` (accueil) | Marie-Josée | `VOTRE_CLE_WEB3FORMS` |
-| `nous-joindre.html` | Marie-Josée | `VOTRE_CLE_WEB3FORMS` |
-| `marie-josee-lepage.html` | Marie-Josée | `VOTRE_CLE_MARIE_JOSEE` |
-| `matis-leger.html` | Matis | `VOTRE_CLE_MATIS` |
-| `adam-masse.html` | Adam | `VOTRE_CLE_ADAM` |
+| `nous-joindre/index.html` | Marie-Josée | `VOTRE_CLE_WEB3FORMS` |
+| `marie-josee-lepage/index.html` | Marie-Josée | `VOTRE_CLE_MARIE_JOSEE` |
+| `matis-leger/index.html` | Matis | `VOTRE_CLE_MATIS` |
+| `adam-masse/index.html` | Adam | `VOTRE_CLE_ADAM` |
 
 **Comment chacun crée sa clé** : aller sur **https://web3forms.com**, entrer son courriel
 professionnel (`mleger@planipret.com`, `adammasse@planipret.com`, `mlepage@planipret.com`).

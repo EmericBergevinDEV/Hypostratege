@@ -29,7 +29,7 @@
   };
 
   /* ---------- 1) Taux du marché (Banque du Canada) ---------- */
-  fetch("data/rates-marche.json", { cache: "no-store" })
+  fetch("/data/rates-marche.json", { cache: "no-store" })
     .then(function (r) { if (!r.ok) throw new Error("marché indisponible"); return r.json(); })
     .then(function (data) {
       document.querySelectorAll("[data-marche]").forEach(function (el) {
