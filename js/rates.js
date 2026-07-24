@@ -34,8 +34,13 @@
 
   var pct = function (v) {
     if (v === null || v === undefined || v === "") return null;
-    var n = parseFloat(String(v).replace(",", ".").replace(/[^\d.\-]/g, ""));
-    if (isNaN(n)) return null;
+    var s = String(v).trim();
+    // Garde-fou : une cellule que Google a convertie en date (ex. « 4.04 » lu
+    // comme le 4 avril) ne doit JAMAIS être affichée comme un taux. On préfère
+    // un tiret visible à un chiffre faux sur un site public.
+    if (/^Date\(/.test(s)) return null;
+    var n = parseFloat(s.replace(",", ".").replace(/[^\d.\-]/g, ""));
+    if (isNaN(n) || n < 0 || n > 30) return null;   // hors de toute plage plausible
     return n.toFixed(2).replace(".", ",") + " %";
   };
 
