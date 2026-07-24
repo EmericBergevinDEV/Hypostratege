@@ -413,7 +413,10 @@ img { max-width: 100%; display: block; }
 .rates-note { font-size: .84rem; color: var(--muted); margin-top: 14px; }
 
 /* Chips de taux de référence (marché — automatique) */
-.rate-chips { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.rate-chips { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; }
+/* Colonne « taux banque » : présente mais visuellement en retrait,
+   pour que l'avantage PlaniPrêt ressorte. */
+.rates td.rate-bank { color: var(--muted); font-weight: 400; }
 .rate-chip {
   background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
   padding: 24px 22px; text-align: center; box-shadow: var(--shadow-sm);

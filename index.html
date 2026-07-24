@@ -177,34 +177,41 @@
   <section class="section section--cloud" id="taux">
     <div class="container">
       <div class="text-center" style="max-width:700px;margin:0 auto 44px;">
-        <span class="eyebrow">Taux hypothécaires</span>
-        <h2>Le marché en un coup d'œil, et nos taux pour vous</h2>
-        <p class="lead mx-auto">À titre indicatif seulement. Contactez-nous pour une offre personnalisée selon votre dossier.</p>
+        <span class="eyebrow">Les taux du jour</span>
+        <h2>La transparence avant tout</h2>
+        <p class="lead mx-auto">Un bon taux est important. Une bonne stratégie, encore plus. Voici un aperçu des taux actuels — notre rôle est de vous aider à choisir celui qui correspond réellement à vos objectifs.</p>
       </div>
 
-      <!-- Taux de référence du marché — mis à jour automatiquement (Banque du Canada) -->
-      <p class="rate-block-title">Taux de référence du marché</p>
+      <!-- Tableau comparatif — lu dans le Google Sheet (modifiable sans code) -->
+      <table class="rates">
+        <thead>
+          <tr><th>Type de prêt</th><th>Taux banque*</th><th>Taux PlaniPrêt**</th></tr>
+        </thead>
+        <tbody id="rates-body">
+          <tr><td>1 an fixe</td><td class="rate-bank">6,89 %</td><td><strong>4,74 %</strong></td></tr>
+          <tr><td>2 ans fixe</td><td class="rate-bank">6,34 %</td><td><strong>4,14 %</strong></td></tr>
+          <tr><td>3 ans fixe</td><td class="rate-bank">6,19 %</td><td><strong>4,04 %</strong></td></tr>
+          <tr><td>3 ans variable fermé</td><td class="rate-bank">5,95 %</td><td><strong>4,45 %</strong></td></tr>
+          <tr><td>4 ans fixe</td><td class="rate-bank">6,24 %</td><td><strong>4,09 %</strong></td></tr>
+          <tr><td>5 ans fixe</td><td class="rate-bank">6,29 %</td><td><strong>4,09 %</strong></td></tr>
+          <tr><td>Variable 5 ans</td><td class="rate-bank">5,40 %</td><td><strong>3,00 %</strong></td></tr>
+          <tr><td>Refinancement fixe ou variable</td><td class="rate-bank">7,65 %</td><td><strong>3,00 %</strong></td></tr>
+          <tr><td>7 ans fixe</td><td class="rate-bank">6,69 %</td><td><strong>4,44 %</strong></td></tr>
+          <tr><td>10 ans fixe</td><td class="rate-bank">7,14 %</td><td><strong>5,04 %</strong></td></tr>
+          <tr><td>Marge de crédit</td><td class="rate-bank">5,45 %</td><td><strong>4,95 %</strong></td></tr>
+        </tbody>
+      </table>
+      <p class="rate-source" id="rate-taux-source"></p>
+
+      <!-- Indicateurs de référence — mis à jour automatiquement (Banque du Canada) -->
+      <p class="rate-block-title" style="margin-top:52px;">Indicateurs du marché</p>
       <div class="rate-chips">
         <div class="rate-chip"><span class="rate-chip__label">Taux préférentiel</span><span class="rate-chip__value" data-marche="prime">4,45 %</span></div>
-        <div class="rate-chip"><span class="rate-chip__label">Conventionnel 5 ans (affiché)</span><span class="rate-chip__value" data-marche="conventionnel_5ans">6,09 %</span></div>
         <div class="rate-chip"><span class="rate-chip__label">Obligation 5 ans</span><span class="rate-chip__value" data-marche="obligation_5ans">3,14 %</span></div>
       </div>
       <p class="rate-source" id="rate-marche-source">Taux de référence — Banque du Canada.</p>
 
-      <!-- Nos taux négociés — lus dans le Google Sheet (modifiable sans code) -->
-      <p class="rate-block-title" style="margin-top:44px;">Nos taux négociés</p>
-      <table class="rates">
-        <thead>
-          <tr><th>Terme</th><th>Type</th><th>Notre taux à partir de*</th></tr>
-        </thead>
-        <tbody id="rates-body">
-          <tr><td>3 ans</td><td>Fixe fermé</td><td><strong>—</strong></td></tr>
-          <tr><td>5 ans</td><td>Fixe fermé</td><td><strong>—</strong></td></tr>
-          <tr><td>5 ans</td><td>Variable fermé</td><td><strong>—</strong></td></tr>
-        </tbody>
-      </table>
-      <p class="rate-source" id="rate-taux-source"></p>
-      <p class="rates-note">*Taux fournis à titre indicatif, sujets à changement sans préavis et selon l'admissibilité. Certaines conditions s'appliquent. Communiquez avec nous pour une soumission personnalisée.</p>
+      <p class="rates-note">*Taux affichés en institution, à titre comparatif. **Taux obtenus par l'entremise de PlaniPrêt. Tous les taux sont fournis à titre indicatif, sujets à changement sans préavis et selon l'admissibilité du dossier. Certaines conditions s'appliquent. Communiquez avec nous pour une soumission personnalisée.</p>
     </div>
   </section>
 
