@@ -9,11 +9,19 @@
    ========================================================= */
 (function () {
   // ⬇️ COLLE ICI L'IDENTIFIANT DE TON GOOGLE SHEET (voir README). Laisse vide tant que non configuré.
-  var SHEET_ID = "";
+  var SHEET_ID = "1srRVqKfzS5V6Or_WL2On4t5iJ1QUbYSGmYyGe397b08";
   var SHEET_TAB = "Taux";
 
   var frDate = function (iso) {
     if (!iso) return "";
+    // Google Sheets renvoie les cellules de type date sous la forme Date(2026,6,23)
+    // (le mois y est compté à partir de 0).
+    var g = /^Date\((\d+),(\d+),(\d+)\)$/.exec(String(iso).trim());
+    if (g) {
+      var gd = new Date(+g[1], +g[2], +g[3]);
+      try { return gd.toLocaleDateString("fr-CA", { day: "numeric", month: "long", year: "numeric" }); }
+      catch (e) { return g[3] + "/" + (+g[2] + 1) + "/" + g[1]; }
+    }
     var d = new Date(iso.length <= 10 ? iso + "T00:00:00" : iso);
     if (isNaN(d)) return "";
     try {
@@ -59,13 +67,41 @@
       var json = JSON.parse(text.substring(start, end + 1));
       var rows = (json.table && json.table.rows) || [];
 
+      var cellText = function (c) { return c && c.v != null ? String(c.v).trim() : ""; };
+
+      // Repérer la ligne d'en-tête et la position réelle de chaque colonne,
+      // pour rester robuste si le tableur contient des colonnes en trop.
+      var idx = null, headerRow = -1;
+      for (var r = 0; r < rows.length && idx === null; r++) {
+        var cells = (rows[r] && rows[r].c) || [];
+        var found = {};
+        cells.forEach(function (c, n) {
+          var h = cellText(c).toLowerCase();
+          if (/^terme/.test(h)) found.terme = n;
+          else if (/^type/.test(h)) found.type = n;
+          else if (/^taux/.test(h)) found.taux = n;
+          else if (/^(maj|mise)/.test(h)) found.maj = n;
+        });
+        if (found.terme !== undefined && found.taux !== undefined) { idx = found; headerRow = r; }
+      }
+      // Repli : positions classiques si aucun en-tête n'a été trouvé
+      if (idx === null) { idx = { terme: 0, type: 1, taux: 2, maj: 3 }; headerRow = -1; }
+
+      // Si la colonne de mise à jour n'a pas d'en-tête, repérer la 1re colonne de type date.
+      if (idx.maj === undefined) {
+        var cols = (json.table && json.table.cols) || [];
+        for (var k = 0; k < cols.length; k++) {
+          if (cols[k] && cols[k].type === "date") { idx.maj = k; break; }
+        }
+      }
+
       var out = [];
       var maj = "";
       rows.forEach(function (row, i) {
+        if (i <= headerRow) return;                   // sauter l'en-tête et ce qui précède
         var c = row.c || [];
-        var val = function (n) { return c[n] && c[n].v != null ? String(c[n].v).trim() : ""; };
-        var terme = val(0), type = val(1), taux = val(2), date = val(3);
-        if (i === 0 && /terme/i.test(terme)) return; // ignorer une éventuelle ligne d'en-tête
+        var val = function (n) { return n === undefined ? "" : cellText(c[n]); };
+        var terme = val(idx.terme), type = val(idx.type), taux = val(idx.taux), date = val(idx.maj);
         if (!terme && !type && !taux) return;         // ignorer les lignes vides
         if (date && !maj) maj = date;
         var tapct = pct(taux) || (taux ? taux : "—");
