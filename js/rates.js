@@ -98,9 +98,25 @@
         var json = JSON.parse(text.substring(start, end + 1));
         var rows = (json.table && json.table.rows) || [];
 
-        // Repérer la ligne d'en-tête et la position réelle de chaque colonne :
-        // le tableur peut contenir des colonnes en trop ou dans un autre ordre.
+        // Repérer la position réelle de chaque colonne : le tableur peut
+        // contenir des colonnes en trop ou dans un autre ordre.
         var idx = null, headerRow = -1;
+
+        // 1) Cas normal : Google a reconnu la ligne de titres et la fournit
+        //    comme libellés de colonnes (les données commencent alors à la ligne 0).
+        var entetes = {};
+        ((json.table && json.table.cols) || []).forEach(function (c, n) {
+          var h = String((c && c.label) || "").toLowerCase();
+          if (/banque/.test(h)) entetes.banque = n;
+          else if (/planipr|notre|hypostrat/.test(h)) entetes.notre = n;
+          else if (/type|pr[êe]t|terme/.test(h)) { if (entetes.type === undefined) entetes.type = n; }
+          else if (/^(maj|mise)/.test(h)) entetes.maj = n;
+        });
+        if (entetes.type !== undefined && entetes.notre !== undefined) {
+          idx = entetes; headerRow = -1;
+        }
+
+        // 2) Sinon : chercher la ligne de titres parmi les données.
         for (var r = 0; r < rows.length && idx === null; r++) {
           var cells = (rows[r] && rows[r].c) || [];
           var found = {};
