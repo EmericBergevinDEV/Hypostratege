@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="210" viewBox="0 0 760 210">
+<rect width="760" height="210" fill="#07182b"/>
+<g transform="translate(24 21)" fill="none" stroke="#d5a039" stroke-width="5">
+  <path d="M18 77 L78 22 L138 77"/>
+  <path d="M35 67 V157 H121 V67"/>
+  <path d="M57 157 V100 H99 V157"/>
+  <rect x="68" y="52" width="22" height="22"/>
+  <circle cx="78" cy="88" r="70"/>
+</g>
+<text x="180" y="55" font-family="Georgia,serif" font-size="25" letter-spacing="3" fill="#d5a039">ÉQUIPE</text>
+<text x="180" y="108" font-family="Georgia,serif" font-size="45" letter-spacing="2" fill="#ffffff">HYPOSTRATÈGE</text>
+<line x1="180" y1="127" x2="242" y2="127" stroke="#d5a039" stroke-width="3"/>
+<text x="255" y="134" font-family="Arial,sans-serif" font-size="17" letter-spacing="2" fill="#d5a039">LA STRATÉGIE AVANT LE TAUX</text>
+<line x1="583" y1="127" x2="645" y2="127" stroke="#d5a039" stroke-width="3"/>
+<text x="180" y="172" font-family="Arial,sans-serif" font-size="16" letter-spacing="1.5" fill="#ffffff">AFFILIÉ À PLANIPRÊT</text>
+</svg>

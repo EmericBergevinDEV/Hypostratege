@@ -1,0 +1,15 @@
+{
+  "name": "Équipe Hypostratège",
+  "short_name": "Hypostratège",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07182b",
+  "theme_color": "#07182b",
+  "icons": [
+    {
+      "src": "assets/logo-hypostratege-officiel.png",
+      "sizes": "555x700",
+      "type": "image/png"
+    }
+  ]
+}

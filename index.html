@@ -1,294 +1,293 @@
 <!DOCTYPE html>
-<html lang="fr">
+
+<html lang="fr-CA">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hypostratège — Courtiers hypothécaires | Accompagnement humain et éclairé</title>
-  <meta name="description" content="Hypostratège, votre équipe de courtiers hypothécaires. Achat, renouvellement, refinancement et investissement immobilier. Un accompagnement humain, transparent et sur mesure." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/styles.css" />
-</head>
-<body>
-
-  <!-- ===== EN-TÊTE ===== -->
-  <header class="site-header">
-    <div class="container nav">
-      <a href="/" class="brand">
-        <span class="brand__mark">H</span>
-        <span class="brand__name">Hypostratège<small>Courtiers hypothécaires</small></span>
-      </a>
-      <button class="nav__toggle" aria-label="Menu"><span></span><span></span><span></span></button>
-      <ul class="nav__links">
-        <li><a href="/" class="is-active">Accueil</a></li>
-        <li><a href="/services/">Services</a></li>
-        <li><a href="/a-propos/">À propos</a></li>
-        <li><a href="/notre-equipe/">Notre équipe</a></li>
-        <li><a href="/avis-clients/">Avis clients</a></li>
-        <li><a href="/nous-joindre/">Nous joindre</a></li>
-        <li class="nav__cta"><a href="/nous-joindre/" class="btn btn--gold">Consultation gratuite</a></li>
-      </ul>
-    </div>
-  </header>
-
-  <!-- ===== HÉRO ===== -->
-  <section class="hero">
-    <div class="container hero__grid">
-      <div class="hero__content">
-        <span class="hero__badge">★ Partenaire de plus de 20 institutions financières</span>
-        <h1>Un accompagnement <em>éclairé</em> pour des projets immobiliers solides</h1>
-        <p>Hypostratège rend le monde hypothécaire plus humain, accessible et rassurant. Nous négocions pour vous les meilleures conditions, en toute transparence.</p>
-        <div class="hero__actions">
-          <a href="/services/" class="btn btn--ghost-light">Découvrir nos services</a>
-          <a href="tel:+15147143411" class="btn btn--ghost-light">☎ 514 714-3411</a>
-        </div>
-      </div>
-
-      <!-- Formulaire rapide : conversion directe depuis l'accueil -->
-      <div class="hero-form">
-        <h3>Consultation gratuite</h3>
-        <p class="hero-form__sub">Laissez vos coordonnées : un courtier vous rappelle rapidement. Sans engagement.</p>
-        <div class="form__success">✅ Merci ! Votre demande est reçue. Un courtier vous recontacte très bientôt.</div>
-        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-          <!-- ⬇️ COLLEZ ICI VOTRE CLÉ WEB3FORMS (gratuite, voir README étape 2) -->
-          <input type="hidden" name="access_key" value="VOTRE_CLE_WEB3FORMS" />
-          <input type="hidden" name="subject" value="Nouvelle demande de consultation — Hypostratège" />
-          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
-          <div class="field">
-            <label for="hf-prenom">Prénom</label>
-            <input type="text" id="hf-prenom" name="prenom" required />
-          </div>
-          <div class="field">
-            <label for="hf-tel">Téléphone</label>
-            <input type="tel" id="hf-tel" name="telephone" required />
-          </div>
-          <div class="field">
-            <label for="hf-courriel">Courriel</label>
-            <input type="email" id="hf-courriel" name="courriel" required />
-          </div>
-          <button type="submit" class="btn btn--gold"
-            onclick="if(this.form.access_key.value.indexOf('VOTRE_CLE')!==-1){window.location.href='mailto:emeric.bergevin@hotmail.com?subject=Consultation%20gratuite&body='+encodeURIComponent('Prénom: '+document.getElementById('hf-prenom').value+'\nTéléphone: '+document.getElementById('hf-tel').value+'\nCourriel: '+document.getElementById('hf-courriel').value);return false;}">
-            Obtenir ma consultation gratuite
-          </button>
-          <p class="form__note">🔒 Vos informations restent confidentielles.</p>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SERVICES ===== -->
-  <section class="section" id="services">
-    <div class="container">
-      <div class="text-center" style="max-width:720px;margin:0 auto 46px;">
-        <span class="eyebrow">Nos services</span>
-        <h2>Une solution pour chaque étape de votre projet</h2>
-        <p class="lead mx-auto">Que vous achetiez, renouveliez ou investissiez, nous bâtissons une stratégie adaptée à votre réalité.</p>
-      </div>
-      <div class="grid grid--3">
-        <div class="card">
-          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></div>
-          <h3>Nouvel achat</h3>
-          <p>Acheter une première propriété peut sembler intimidant. Nous vous guidons de la préapprobation jusqu'à la signature, une étape à la fois.</p>
-          <a href="/services/" class="card__link">En savoir plus →</a>
-        </div>
-        <div class="card">
-          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4v6h6"/><path d="M20 20v-6h-6"/><path d="M4 10a8 8 0 0 1 14-3M20 14a8 8 0 0 1-14 3"/></svg></div>
-          <h3>Renouvellement</h3>
-          <p>Ne renouvelez pas les yeux fermés. Nous analysons le marché et négocions pour maximiser vos économies, sans surprise.</p>
-          <a href="/services/" class="card__link">En savoir plus →</a>
-        </div>
-        <div class="card">
-          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-          <h3>Refinancement</h3>
-          <p>Consolider des dettes, financer un projet ou libérer de l'équité : nous évaluons vos options avec rigueur et transparence.</p>
-          <a href="/services/" class="card__link">En savoir plus →</a>
-        </div>
-        <div class="card">
-          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
-          <h3>Investissement immobilier</h3>
-          <p>Stratégies avancées, dont la manœuvre Smith, pour optimiser la croissance de votre patrimoine de façon structurée.</p>
-          <a href="/services/" class="card__link">En savoir plus →</a>
-        </div>
-        <div class="card">
-          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M8 4v16"/></svg></div>
-          <h3>Taux hypothécaires</h3>
-          <p>Accès transparent aux taux du marché et explication des produits (fixe, variable, ouvert, fermé) pour décider en toute confiance.</p>
-          <a href="/services/" class="card__link">En savoir plus →</a>
-        </div>
-        <div class="card" style="background:linear-gradient(135deg,var(--royal),var(--royal-light));border:0;color:#fff;">
-          <div class="card__icon" style="background:rgba(255,255,255,.12);border-color:rgba(200,162,75,.5);color:var(--gold-light);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-          <h3 style="color:#fff;">Une question ?</h3>
-          <p style="color:#D4DEF0;">Parlons de votre projet. La première consultation est gratuite et sans engagement.</p>
-          <a href="/nous-joindre/" class="card__link" style="color:var(--gold-light);">Nous joindre →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== À PROPOS (split) ===== -->
-  <section class="section section--cloud">
-    <div class="container split">
-      <div class="split__media">
-        <!-- Remplacez par une photo : <img src="/assets/images/equipe.jpg" alt="L'équipe Hypostratège"> -->
-        <svg viewBox="0 0 24 24" width="80" height="80" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      </div>
-      <div>
-        <span class="eyebrow">À propos</span>
-        <h2>Le courtage hypothécaire, à visage humain</h2>
-        <p>Chez Hypostratège, vous n'êtes jamais un numéro de dossier. Notre équipe met son expérience combinée au service d'un accompagnement personnalisé, où vous vous sentez guidé, écouté et soutenu à chaque étape.</p>
-        <ul class="list-check">
-          <li>Accès à plus de 20 prêteurs, un seul interlocuteur</li>
-          <li>Des conseils transparents, sans jargon inutile</li>
-          <li>Un service gratuit pour vous, financé par le prêteur</li>
-          <li>Encadrés par l'Autorité des marchés financiers (AMF)</li>
-        </ul>
-        <a href="/a-propos/" class="btn btn--royal" style="margin-top:10px;">Découvrir notre approche</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== STATISTIQUES ===== -->
-  <section class="section section--royal section--tight">
-    <div class="container">
-      <div class="stats">
-        <div><div class="stat__num">20+</div><div class="stat__label">Institutions financières partenaires</div></div>
-        <div><div class="stat__num">100 %</div><div class="stat__label">Service gratuit et sans engagement</div></div>
-        <div><div class="stat__num">AMF</div><div class="stat__label">Courtiers encadrés et certifiés</div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== PRÊTEURS ===== -->
-  <section class="section section--tight">
-    <div class="container text-center">
-      <span class="eyebrow">Notre réseau</span>
-      <h2>Nous magasinons parmi les meilleurs prêteurs</h2>
-      <p class="lead mx-auto" style="margin-bottom:34px;">Banques, coopératives et prêteurs alternatifs : nous comparons pour vous.</p>
-      <div class="logos">
-        <span>TD</span><span>Banque Nationale</span><span>Scotia</span><span>Desjardins</span>
-        <span>CIBC</span><span>MCAP</span><span>First National</span><span>Equitable Bank</span>
-        <span>RFA</span><span>B2B Banque</span><span>+ plusieurs autres</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== TAUX ===== -->
-  <section class="section section--cloud" id="taux">
-    <div class="container">
-      <div class="text-center" style="max-width:700px;margin:0 auto 44px;">
-        <span class="eyebrow">Les taux du jour</span>
-        <h2>La transparence avant tout</h2>
-        <p class="lead mx-auto">Un bon taux est important. Une bonne stratégie, encore plus. Voici un aperçu des taux actuels — notre rôle est de vous aider à choisir celui qui correspond réellement à vos objectifs.</p>
-      </div>
-
-      <!-- Tableau comparatif — lu dans le Google Sheet (modifiable sans code) -->
-      <table class="rates">
-        <thead>
-          <tr><th>Type de prêt</th><th>Taux banque*</th><th>Taux PlaniPrêt**</th></tr>
-        </thead>
-        <tbody id="rates-body">
-          <tr><td>1 an fixe</td><td class="rate-bank">6,89 %</td><td><strong>4,74 %</strong></td></tr>
-          <tr><td>2 ans fixe</td><td class="rate-bank">6,34 %</td><td><strong>4,14 %</strong></td></tr>
-          <tr><td>3 ans fixe</td><td class="rate-bank">6,19 %</td><td><strong>4,04 %</strong></td></tr>
-          <tr><td>3 ans variable fermé</td><td class="rate-bank">5,95 %</td><td><strong>4,45 %</strong></td></tr>
-          <tr><td>4 ans fixe</td><td class="rate-bank">6,24 %</td><td><strong>4,09 %</strong></td></tr>
-          <tr><td>5 ans fixe</td><td class="rate-bank">6,29 %</td><td><strong>4,09 %</strong></td></tr>
-          <tr><td>Variable 5 ans</td><td class="rate-bank">5,40 %</td><td><strong>3,00 %</strong></td></tr>
-          <tr><td>Refinancement fixe ou variable</td><td class="rate-bank">7,65 %</td><td><strong>3,00 %</strong></td></tr>
-          <tr><td>7 ans fixe</td><td class="rate-bank">6,69 %</td><td><strong>4,44 %</strong></td></tr>
-          <tr><td>10 ans fixe</td><td class="rate-bank">7,14 %</td><td><strong>5,04 %</strong></td></tr>
-          <tr><td>Marge de crédit</td><td class="rate-bank">5,45 %</td><td><strong>4,95 %</strong></td></tr>
-        </tbody>
-      </table>
-      <p class="rate-source" id="rate-taux-source"></p>
-
-      <!-- Indicateurs de référence — mis à jour automatiquement (Banque du Canada) -->
-      <p class="rate-block-title" style="margin-top:52px;">Indicateurs du marché</p>
-      <div class="rate-chips">
-        <div class="rate-chip"><span class="rate-chip__label">Taux préférentiel</span><span class="rate-chip__value" data-marche="prime">4,45 %</span></div>
-        <div class="rate-chip"><span class="rate-chip__label">Obligation 5 ans</span><span class="rate-chip__value" data-marche="obligation_5ans">3,14 %</span></div>
-      </div>
-      <p class="rate-source" id="rate-marche-source">Taux de référence — Banque du Canada.</p>
-
-      <p class="rates-note">*Taux affichés en institution, à titre comparatif. **Taux obtenus par l'entremise de PlaniPrêt. Tous les taux sont fournis à titre indicatif, sujets à changement sans préavis et selon l'admissibilité du dossier. Certaines conditions s'appliquent. Communiquez avec nous pour une soumission personnalisée.</p>
-    </div>
-  </section>
-
-  <!-- ===== TÉMOIGNAGES ===== -->
-  <section class="section">
-    <div class="container">
-      <div class="text-center" style="margin-bottom:40px;">
-        <span class="eyebrow">Avis clients</span>
-        <h2>Ce que nos clients disent de nous</h2>
-      </div>
-      <div class="grid grid--3">
-        <div class="quote"><div class="quote__stars">★★★★★</div><p>« Exemple de témoignage. Remplacez ce texte par un véritable avis client. »</p><div class="quote__author">— Prénom N.</div></div>
-        <div class="quote"><div class="quote__stars">★★★★★</div><p>« Exemple de témoignage. Remplacez ce texte par un véritable avis client. »</p><div class="quote__author">— Prénom N.</div></div>
-        <div class="quote"><div class="quote__stars">★★★★★</div><p>« Exemple de témoignage. Remplacez ce texte par un véritable avis client. »</p><div class="quote__author">— Prénom N.</div></div>
-      </div>
-      <div class="text-center" style="margin-top:34px;"><a href="/avis-clients/" class="btn btn--ghost">Voir tous les avis</a></div>
-    </div>
-  </section>
-
-  <!-- ===== CTA FINAL ===== -->
-  <section class="section section--tight">
-    <div class="container">
-      <div class="cta-band">
-        <span class="eyebrow" style="color:var(--gold-light);">Sans engagement</span>
-        <h2>Prêt à discuter de votre projet ?</h2>
-        <p>Obtenez une consultation gratuite avec un courtier de l'équipe Hypostratège. Ce formulaire ne vous engage à rien.</p>
-        <div style="margin-top:22px;"><a href="/nous-joindre/" class="btn btn--gold">Planifier ma consultation</a></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== PIED DE PAGE ===== -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="/" class="brand"><span class="brand__mark">H</span><span class="brand__name">Hypostratège<small>Courtiers hypothécaires</small></span></a>
-          <p style="margin-top:16px;max-width:34ch;">Un accompagnement humain et transparent pour tous vos projets hypothécaires.</p>
-        </div>
-        <div>
-          <h4>Navigation</h4>
-          <ul>
-            <li><a href="/">Accueil</a></li>
-            <li><a href="/services/">Services</a></li>
-            <li><a href="/a-propos/">À propos</a></li>
-            <li><a href="/notre-equipe/">Notre équipe</a></li>
-            <li><a href="/avis-clients/">Avis clients</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Services</h4>
-          <ul>
-            <li><a href="/services/">Nouvel achat</a></li>
-            <li><a href="/services/">Renouvellement</a></li>
-            <li><a href="/services/">Refinancement</a></li>
-            <li><a href="/services/">Investissement</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Nous joindre</h4>
-          <ul>
-            <li><a href="tel:+15147143411">514 714-3411</a></li>
-            <li><a href="mailto:mlepage@planipret.com">mlepage@planipret.com</a></li>
-            <li>425, avenue Mathers, bureau 102<br>Saint-Eustache (Québec) J7P 4C1</li>
-            <li><a href="/nous-joindre/">Formulaire de contact</a></li>
-          </ul>
-        </div>
-      </div>
-      <p class="footer-disclaimer">Hypostratège est une équipe de courtiers hypothécaires encadrés par l'Autorité des marchés financiers (AMF). Le courtage hypothécaire est offert par l'entremise de PlaniPrêt. Les taux affichés sont fournis à titre indicatif et peuvent changer sans préavis.</p>
-      <div class="footer-bottom">
-        <span>© <span id="year">2026</span> Hypostratège. Tous droits réservés.</span>
-        <span>Conçu au Québec</span>
-      </div>
-    </div>
-  </footer>
-
-  <script src="/js/main.js"></script>
-  <script src="/js/rates.js"></script>
-</body>
-</html>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Équipe Hypostratège — Une hypothèque adaptée à votre réalité</title>
+<meta content="Équipe Hypostratège : une stratégie hypothécaire personnalisée, humaine et sans frais pour votre projet." name="description"/>
+<meta content="#07182b" name="theme-color"/>
+<meta content="website" property="og:type"/>
+<meta content="fr_CA" property="og:locale"/>
+<meta content="Équipe Hypostratège" property="og:title"/>
+<meta content="Une hypothèque adaptée à votre réalité." property="og:description"/>
+<meta content="assets/partage-hypostratege-officiel.jpg" property="og:image"/>
+<link href="assets/logo-hypostratege-officiel.png" rel="icon"/>
+<link href="styles.css" rel="stylesheet"/>
+<link data-production="true" href="https://hypostratege.com/" rel="canonical"/><meta content="index,follow,max-image-preview:large" data-production="true" name="robots"/><meta content="Équipe Hypostratège" data-production="true" name="author"/><meta content="https://hypostratege.com/" data-production="true" property="og:url"/><meta content="Équipe Hypostratège" data-production="true" property="og:site_name"/><meta content="summary_large_image" data-production="true" name="twitter:card"/><meta content="Équipe Hypostratège — Une hypothèque adaptée à votre réalité" data-production="true" name="twitter:title"/><meta content="Une stratégie hypothécaire personnalisée à Laval, sur la Rive-Nord et partout au Québec." data-production="true" name="twitter:description"/><meta content="https://hypostratege.com/assets/partage-hypostratege-officiel.jpg" data-production="true" name="twitter:image"/><link data-production="true" href="site.webmanifest" rel="manifest"/><link data-production="true" href="assets/logo-hypostratege-officiel.png" rel="apple-touch-icon"/><script data-production="true" defer="" src="analytics-config.js"></script><script data-production="true" defer="" src="analytics.js"></script><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FinancialService",
+  "name": "Équipe Hypostratège",
+  "url": "https://hypostratege.com/",
+  "logo": "https://hypostratege.com/assets/logo-hypostratege-officiel.png",
+  "image": "https://hypostratege.com/assets/partage-hypostratege-officiel.jpg",
+  "description": "Courtage hypothécaire personnalisé à Laval, sur la Rive-Nord et partout au Québec.",
+  "telephone": "+1-514-714-3411",
+  "email": "mlepage@planipret.com",
+  "areaServed": "Québec, Canada",
+  "sameAs": [
+    "https://www.facebook.com/equipehypostratege",
+    "https://www.linkedin.com/in/Marie-joseelepage"
+  ],
+  "employee": [
+    {
+      "@type": "Person",
+      "name": "Marie-Josée Lepage",
+      "jobTitle": "Directrice et courtière hypothécaire",
+      "email": "mlepage@planipret.com",
+      "telephone": "+1-514-714-3411"
+    },
+    {
+      "@type": "Person",
+      "name": "Adam Massé",
+      "jobTitle": "Courtier hypothécaire",
+      "email": "adammasse@planipret.com",
+      "telephone": "+1-514-663-3411"
+    },
+    {
+      "@type": "Person",
+      "name": "Matis Léger",
+      "jobTitle": "Courtier hypothécaire",
+      "email": "mleger@planipret.com",
+      "telephone": "+1-514-691-7488"
+    }
+  ]
+}</script></head>
+<body><a class="skip-link" href="#contenu">Aller au contenu principal</a><noscript>Ce site fonctionne sans JavaScript, mais la calculatrice, le menu mobile et l’ouverture progressive du formulaire nécessitent JavaScript.</noscript>
+<header class="site-header">
+<button aria-controls="main-navigation" aria-expanded="false" aria-label="Ouvrir le menu" class="menu-toggle">☰</button>
+<nav aria-label="Navigation principale" id="main-navigation">
+<a href="#accueil">Accueil</a><a href="#niches">Nos clientèles</a><a href="#equipe">À propos</a><a href="#notre-facon">Notre approche</a><a href="#services">Services</a>
+<a href="#calculateurs">Calculatrices</a><a href="#temoignages">Témoignages</a><a data-open-preauth="" href="#preautorisation">Préautorisation</a><a href="#contact">Nous joindre</a>
+</nav>
+</header>
+<main id="contenu">
+<section class="hero" id="accueil">
+<div class="hero-copy">
+<p class="eyebrow">La stratégie avant le taux</p>
+<div class="hero-brandline">
+<img alt="Logo officiel Équipe Hypostratège" src="assets/logo-hypostratege-officiel.png"/>
+<div>
+<h1><span>Équipe</span> Hypostratège</h1>
+<h2>Une hypothèque adaptée à votre réalité.</h2>
+</div>
+</div>
+<p>Nous analysons votre situation dans son ensemble afin de bâtir une stratégie hypothécaire claire et adaptée à votre projet.</p>
+<div class="actions">
+<a class="btn btn-gold" data-open-preauth="" href="#preautorisation">Faire une demande rapide<small>Sans frais • Sans engagement</small></a>
+<a class="btn btn-outline" href="#contact">Prendre rendez-vous</a>
+</div>
+<div class="trust"><span>✓ Plus de 20 ans d’expérience</span><span>✓ Approche humaine et stratégique</span><span>✓ Partout au Québec</span></div>
+</div>
+<div aria-label="Poignée de main symbolisant une entente de confiance" class="hero-photo" role="img"></div>
+</section>
+<section class="niches section" id="niches">
+<div class="section-title centered">
+<p class="eyebrow">Nos clientèles</p>
+<h2>Nous comprenons votre réalité.</h2>
+<p>Chaque situation mérite d’être présentée avec justesse afin de trouver le financement réellement adapté.</p>
+</div>
+<div class="niche-grid five">
+<article class="niche-card">
+<img alt="Premier acheteur devant sa première propriété" decoding="async" loading="lazy" src="assets/niche-premier-acheteur.svg"/>
+<div><p class="eyebrow">Premier acheteur</p><h3>Votre première propriété, étape par étape.</h3><p>Un accompagnement clair pour comprendre votre capacité d’achat, votre mise de fonds et chaque étape jusqu’à l’achat de votre première propriété.</p></div>
+</article>
+<article class="niche-card">
+<img alt="Employé syndiqué au travail" decoding="async" loading="lazy" src="assets/niche-syndique.webp"/>
+<div><p class="eyebrow">Employés syndiqués</p><h3>Votre stabilité réelle mérite d’être bien présentée.</h3><p>Nous tenons compte de votre convention collective, de vos avantages, de votre ancienneté et de vos objectifs familiaux.</p></div>
+</article>
+<article class="niche-card">
+<img alt="Travailleur à contrat" decoding="async" loading="lazy" src="assets/niche-contrat.webp"/>
+<div><p class="eyebrow">Travailleurs à contrat</p><h3>Des contrats multiples peuvent former un dossier solide.</h3><p>Nous documentons la continuité de vos revenus et mettons en valeur la stabilité réelle de votre parcours.</p></div>
+</article>
+<article class="niche-card">
+<img alt="Travailleuse autonome" decoding="async" loading="lazy" src="assets/niche-autonome.webp"/>
+<div><p class="eyebrow">Travailleurs autonomes</p><h3>Votre entreprise ne se résume pas à une seule ligne fiscale.</h3><p>Nous analysons vos revenus, votre structure et les programmes disponibles pour présenter votre réalité avec justesse.</p></div>
+</article>
+<article class="niche-card">
+<img alt="Immeuble résidentiel contemporain" decoding="async" loading="lazy" src="assets/niche-investisseur.webp"/>
+<div><p class="eyebrow">Investisseurs immobiliers</p><h3>Une stratégie de financement pensée à long terme.</h3><p>Nous structurons le financement selon les propriétés, les revenus locatifs et vos objectifs de croissance.</p></div>
+</article>
+</div>
+</section>
+<section class="team section" id="equipe">
+<div class="section-title">
+<p class="eyebrow">L’équipe derrière votre stratégie</p>
+<h2>Trois professionnels, une même priorité : votre projet.</h2>
+</div>
+<div class="team-grid">
+<article class="member"><img alt="Marie-Josée Lepage" decoding="async" loading="lazy" src="assets/marie-josee.webp"/><div><h3>Marie-Josée Lepage</h3><p class="role">Directrice et courtière hypothécaire</p><a href="tel:+15147143411">514 714-3411</a><a href="mailto:mlepage@planipret.com">mlepage@planipret.com</a></div></article>
+<article class="member"><img alt="Adam Massé" decoding="async" loading="lazy" src="assets/adam.webp"/><div><h3>Adam Massé</h3><p class="role">Courtier hypothécaire</p><a href="tel:+15146633411">514 663-3411</a><a href="mailto:adammasse@planipret.com">adammasse@planipret.com</a></div></article>
+<article class="member"><img alt="Matis Léger" decoding="async" loading="lazy" src="assets/matis.webp"/><div><h3>Matis Léger</h3><p class="role">Courtier hypothécaire</p><a href="tel:+15146917488">514 691-7488</a><a href="mailto:mleger@planipret.com">mleger@planipret.com</a></div></article>
+</div>
+</section>
+<section class="rates section">
+<div class="rates-copy">
+<p class="eyebrow">Pourquoi nos taux ne sont-ils pas affichés?</p>
+<h2>Parce que chaque projet est unique.</h2>
+<p>Nous analysons votre situation afin de vous proposer le meilleur financement selon votre réalité. Le meilleur taux est celui qui correspond réellement à votre projet.</p>
+</div>
+<div class="promises"><div>Service personnalisé</div><div>Stratégie adaptée</div><div>Accompagnement jusqu’à la clé</div><div>Résultats durables</div></div>
+</section>
+<section class="not-do section" id="notre-facon">
+<div class="section-title centered">
+<p class="eyebrow">Notre façon de travailler</p>
+<h2>Ce que nous ne faisons pas.</h2>
+<p>Notre rôle est de vous conseiller avec clarté, sans vous pousser vers une solution qui ne correspond pas à votre réalité.</p>
+</div>
+<div class="not-do-grid">
+<article><b>01</b><h3>Pas de pression.</h3><p>Nous ne vous poussons jamais à signer rapidement pour conclure une transaction.</p></article>
+<article><b>02</b><h3>Pas de solution unique.</h3><p>Nous ne proposons pas le même produit à tout le monde sans comprendre le projet.</p></article>
+<article><b>03</b><h3>Pas de jargon inutile.</h3><p>Nous expliquons les options clairement afin que vous puissiez décider en confiance.</p></article>
+<article><b>04</b><h3>Pas de taux sans contexte.</h3><p>Nous n’affichons pas un taux isolé sans analyser les conditions, les frais et votre situation réelle.</p></article>
+</div>
+</section>
+<section class="services section" id="services">
+<div class="section-title centered"><p class="eyebrow">Votre projet commence ici</p><h2>Comment pouvons-nous vous aider ?</h2></div>
+<div class="service-grid">
+<article><span aria-hidden="true" class="icon"><svg viewbox="0 0 48 48"><path d="M6 23 24 8l18 15"></path><path d="M11 21v19h26V21M20 40V28h8v12"></path></svg></span><h3>Achat</h3><p>Préautorisation, capacité d’achat, mise de fonds et accompagnement jusqu’à la remise des clés.</p></article>
+<article><span aria-hidden="true" class="icon"><svg viewbox="0 0 48 48"><circle cx="17" cy="19" r="9"></circle><path d="m24 25 16 16M32 33l4-4M37 38l4-4"></path></svg></span><h3>Renouvellement / Refinancement</h3><p>Votre prêt arrive à échéance ou vous souhaitez profiter de l’équité de votre propriété? Nous analysons toutes les options afin de trouver la solution la plus avantageuse.</p></article>
+<article><span aria-hidden="true" class="icon"><svg viewbox="0 0 48 48"><path d="M24 5 41 14v11c0 10-7 16-17 20C14 41 7 35 7 25V14z"></path><path d="M17 24h14M24 17v14"></path></svg></span><h3>Consolidation de dettes</h3><p>Regroupez vos dettes, réduisez vos paiements mensuels et allégez votre situation financière grâce à une stratégie adaptée à votre réalité.</p></article>
+<article><span aria-hidden="true" class="icon"><svg viewbox="0 0 48 48"><path d="M8 16h27l-6-6M40 32H13l6 6"></path></svg></span><h3>Transfert d’hypothèque</h3><p>Vous changez de prêteur? Nous comparons les offres afin d’obtenir de meilleures conditions et de simplifier votre transfert.</p></article>
+<article><span aria-hidden="true" class="icon"><svg viewbox="0 0 48 48"><path d="M9 42V9h20v33M29 18h10v24M15 16h7M15 23h7M15 30h7M34 25h2M34 31h2M34 37h2M5 42h38"></path></svg></span><h3>Investissement immobilier</h3><p>Une stratégie de financement conçue pour vos propriétés locatives, vos acquisitions et vos projets de croissance.</p></article>
+</div>
+</section>
+<section class="calculators section" id="calculateurs">
+<div class="section-title"><p class="eyebrow">Outils pratiques</p><h2>Calculatrices hypothécaires</h2></div>
+<div class="calc-layout">
+<form class="calculator" id="mortgageCalculator">
+<label>Prix d’achat<input id="price" min="0" step="1000" type="number" value="500000"/></label>
+<label>Mise de fonds<input id="down" min="0" step="1000" type="number" value="100000"/></label>
+<label>Taux annuel (%)<input id="rate" min="0" step=".01" type="number" value="4.59"/></label>
+<label>Amortissement<select id="years"><option>15</option><option>20</option><option selected="">25</option><option>30</option></select></label>
+<button class="btn btn-gold" type="submit">Calculer</button>
+<output id="payment">Paiement mensuel estimé : —</output>
+<small>Estimation informative seulement. Le calcul final dépend du prêteur et des conditions du dossier.</small>
+</form>
+<div class="calc-menu">
+<button data-tool="Paiement hypothécaire">Paiement hypothécaire</button>
+<button data-tool="Capacité d’emprunt">Capacité d’emprunt</button>
+<button data-tool="Mise de fonds">Mise de fonds</button>
+<button data-tool="Taxe de bienvenue">Taxe de bienvenue</button>
+<button data-tool="Refinancement / consolidation">Refinancement / consolidation</button>
+</div>
+</div>
+</section>
+<section class="why section">
+<div class="section-title"><p class="eyebrow">Pourquoi choisir Hypostratège?</p><h2>Le conseil avant la vente.</h2></div>
+<div class="why-grid"><div>Accès à plus de prêteurs</div><div>Une seule demande</div><div>Accompagnement personnalisé</div><div>Service sans frais pour vous</div><div>Analyse stratégique complète</div></div>
+</section>
+<section class="partners-message section" id="partenaires">
+<div class="partners-message-inner">
+<p class="eyebrow">Nos prêteurs et partenaires</p>
+<h2>Nous avons un vaste choix de prêteurs et de partenaires.</h2>
+<p class="partners-lead">Difficile d’obtenir un rendez-vous avec votre banque pour une consultation hypothécaire? Nous sommes là pour vous.</p>
+<p class="partners-statement">Nous sommes votre banque.</p>
+</div>
+</section>
+<section class="testimonials section" id="temoignages">
+<div class="section-title"><p class="eyebrow">Ce que disent nos clients</p><h2>Une relation fondée sur la confiance.</h2></div>
+<div class="quote-grid">
+<blockquote>« Marie-Josée et son équipe ont pris le temps de bien comprendre notre situation et nous ont proposé une stratégie gagnante. »<cite>— Véronique et Marc-Antoine</cite></blockquote>
+<blockquote>« Grâce à leur approche humaine et professionnelle, nous avons économisé et nous dormons beaucoup mieux. »<cite>— Sophie et David</cite></blockquote>
+<blockquote>« Ils ne cherchent pas seulement à placer un prêt : ils pensent à notre avenir. »<cite>— Isabelle et Jonathan</cite></blockquote>
+</div>
+</section>
+<section class="preauth section" id="preautorisation">
+<div class="preauth-intro" id="preauthIntro">
+<p class="eyebrow">Votre projet commence ici</p>
+<h2>Commencez votre préautorisation</h2>
+<p>Répondez à quelques questions afin que nous puissions préparer une première analyse de votre projet avant de communiquer avec vous.</p>
+<button aria-controls="preauthForm" aria-expanded="false" class="btn btn-gold" id="openPreauthButton" type="button">Ouvrir le formulaire de préautorisation</button>
+<small>Environ 2 à 3 minutes • Sans frais • Sans engagement</small>
+</div>
+<form action="https://formsubmit.co/mlepage@planipret.com" class="preauth-form" hidden="" id="preauthForm" method="POST" novalidate="novalidate"><input name="_captcha" type="hidden" value="true"/>
+<input name="_subject" type="hidden" value="Nouvelle demande de préautorisation — Hypostratège"/>
+<input name="_cc" type="hidden" value="mariejoseelp32@gmail.com"/>
+<input name="_template" type="hidden" value="table"/>
+<input name="_next" type="hidden" value="https://hypostratege.com/merci.html"/>
+<input aria-hidden="true" autocomplete="off" class="honeypot" name="_honey" tabindex="-1" type="text"/>
+<fieldset><legend><span>1</span> Vos coordonnées</legend>
+<label>Nom complet *<input autocomplete="name" name="Nom complet" required=""/></label>
+<label>Téléphone *<input autocomplete="tel" name="Téléphone" required="" type="tel"/></label>
+<label>Courriel *<input autocomplete="email" name="Courriel" required="" type="email"/></label>
+<label>Ville<input autocomplete="address-level2" name="Ville"/></label>
+<label>Quel est le meilleur moment pour vous joindre ?<input name="Meilleur moment"/></label>
+</fieldset>
+<fieldset><legend><span>2</span> Quel est votre projet ?</legend>
+<div class="checks">
+<label><input name="Projet" type="checkbox" value="Achat"/> Achat</label>
+<label><input name="Projet" type="checkbox" value="Premier acheteur"/> Premier acheteur</label>
+<label><input name="Projet" type="checkbox" value="Renouvellement / Refinancement / Transfert"/> Renouvellement / Refinancement / Transfert</label>
+<label><input name="Projet" type="checkbox" value="Consolidation de dettes"/> Consolidation de dettes</label>
+<label><input name="Projet" type="checkbox" value="Investissement immobilier"/> Investissement immobilier</label>
+</div>
+<label>Autre<input name="Autre projet"/></label>
+</fieldset>
+<fieldset class="wide"><legend><span>3a</span> Achat / premier acheteur</legend>
+<div class="form-grid four">
+<div><h3>Votre projet</h3>
+<label>Prix d'achat approximatif<input name="Prix achat"/></label>
+<p class="field-label">Type de propriété</p><div class="checks compact">
+<label><input name="Type propriété" type="checkbox" value="Maison / Chalet"/> Maison / Chalet</label>
+<label><input name="Type propriété" type="checkbox" value="Condo"/> Condo</label>
+<label><input name="Type propriété" type="checkbox" value="Petit plex (2 à 5 logements)"/> Petit plex (2 à 5 logements)</label>
+<label><input name="Type propriété" type="checkbox" value="Immeuble à revenus (6 logements et plus)"/> Immeuble à revenus (6 logements et plus)</label>
+</div><label>Autre type<input name="Autre type propriété"/></label>
+</div>
+<div><h3>Votre mise de fonds</h3>
+<label>De combien disposez-vous actuellement comme mise de fonds ?<input name="Mise de fonds"/></label>
+<label class="checkline"><input name="Don familial" type="checkbox" value="Oui"/> Je recevrai un don d'un membre de ma famille.</label>
+<label>Montant du don<input name="Montant don"/></label>
+<label class="checkline"><input name="Vente propriété" type="checkbox" value="Oui"/> Je vendrai une propriété pour financer mon achat.</label>
+<label>Montant approximatif restant après remboursement de l'hypothèque et frais de vente<input name="Équité nette vente"/></label>
+</div>
+<div><h3>Votre situation</h3>
+<p class="field-label">Achetez-vous :</p><div class="checks compact"><label><input name="Achat" type="checkbox" value="Seul"/> Seul</label><label><input name="Achat" type="checkbox" value="Avec conjoint"/> Avec un conjoint</label></div>
+<label>Revenu familial annuel approximatif<input name="Revenu familial"/></label>
+<p class="field-label">Type d'emploi</p><div class="checks compact">
+<label><input name="Emploi" type="checkbox" value="Salarié"/> Salarié</label><label><input name="Emploi" type="checkbox" value="Syndiqué"/> Syndiqué</label><label><input name="Emploi" type="checkbox" value="Travailleur autonome"/> Travailleur autonome</label><label><input name="Emploi" type="checkbox" value="Travailleur à contrat"/> Travailleur à contrat</label><label><input name="Emploi" type="checkbox" value="Retraité"/> Retraité</label>
+</div>
+</div>
+<div><h3>Autres revenus <small>(facultatif)</small></h3>
+<label>Allocation familiale — âge des enfants<input name="Allocation familiale et âge"/></label>
+<label>Pension alimentaire reçue<input name="Pension alimentaire"/></label>
+<label>Autres revenus (rentes, placements, etc.)<input name="Autres revenus"/></label>
+</div>
+</div>
+</fieldset>
+<fieldset class="wide"><legend><span>3b</span> Renouvellement / refinancement / transfert</legend>
+<div class="form-grid three">
+<div><h3>Votre propriété</h3><label>Valeur marchande approximative aujourd'hui<input name="Valeur marchande"/></label><label>Prix payé lors de l'achat<input name="Prix payé"/></label><label>Date d'achat<input name="Date achat" type="date"/></label></div>
+<div><h3>Votre hypothèque actuelle</h3><label>Institution financière<input name="Institution financière"/></label><label>Date d'échéance<input name="Date échéance" type="date"/></label><label>Solde hypothécaire approximatif<input name="Solde hypothécaire"/></label><label>Nombre de tranches hypothécaires<input name="Nombre tranches"/></label></div>
+<div><h3>Votre objectif</h3><div class="checks compact"><label><input name="Objectif" type="checkbox" value="Meilleur taux"/> Obtenir un meilleur taux</label><label><input name="Objectif" type="checkbox" value="Refinancer"/> Refinancer</label><label><input name="Objectif" type="checkbox" value="Consolider dettes"/> Consolider des dettes</label><label><input name="Objectif" type="checkbox" value="Liquidités"/> Obtenir des liquidités</label><label><input name="Objectif" type="checkbox" value="Rénovations"/> Financer des rénovations</label><label><input name="Objectif" type="checkbox" value="Changer institution"/> Changer d'institution financière</label></div><label>Autre objectif<input name="Autre objectif"/></label></div>
+</div>
+</fieldset>
+<fieldset><legend><span>4</span> Préférence pour votre rendez-vous</legend>
+<div class="checks"><label><input name="Rendez-vous" type="checkbox" value="Téléphone"/> Téléphone</label><label><input name="Rendez-vous" type="checkbox" value="Vidéoconférence"/> Vidéoconférence</label><label><input name="Rendez-vous" type="checkbox" value="En personne"/> En personne</label></div>
+<p class="service-note">✓ Oui, nous offrons ce service sur rendez-vous.</p>
+<label>Date souhaitée (si applicable)<input name="Date souhaitée" type="date"/></label>
+</fieldset>
+<fieldset><legend><span>5</span> Commentaires et consentement</legend>
+<label>Commentaires<textarea name="Commentaires" rows="5"></textarea></label>
+<label class="checkline consent"><input name="Consentement" required="True" type="checkbox" value="Accepté"/> J’accepte qu’un membre de l’Équipe Hypostratège communique avec moi au sujet de ma demande et confirme avoir pris connaissance de la <a href="politique-confidentialite.html" rel="noopener" target="_blank">politique de confidentialité</a>.</label>
+</fieldset>
+<div class="form-submit wide"><button class="btn btn-gold" type="submit">Envoyer ma demande</button><p>Votre demande sera envoyée à mlepage@planipret.com avec une copie à mariejoseelp32@gmail.com. N’inscrivez aucun numéro d’assurance sociale, renseignement bancaire ou document confidentiel dans ce formulaire.</p></div>
+</form>
+</section>
+<section class="contact section" id="contact">
+<div><p class="eyebrow">Parlons de votre projet</p><h2>Une bonne stratégie commence par une conversation.</h2><p>Décrivez-nous brièvement votre situation. Un membre de l’équipe vous contactera pour regarder les prochaines étapes avec vous.</p><a class="btn btn-gold" href="mailto:mlepage@planipret.com?subject=Mon%20projet%20hypoth%C3%A9caire%20%E2%80%94%20Hypostrat%C3%A8ge">Parlez-nous de votre projet</a></div>
+<aside>
+<div class="contact-brand"><strong>Équipe</strong><img alt="Logo officiel Hypostratège" src="assets/logo-hypostratege-officiel.png"/></div>
+<a href="tel:+15147143411">514 714-3411</a><a href="mailto:mlepage@planipret.com">mlepage@planipret.com</a><span>Laval • Rive-Nord • partout au Québec</span>
+</aside>
+</section>
+</main>
+<footer class="site-footer">
+<div class="footer-brand"><img alt="Équipe Hypostratège" src="assets/logo-hypostratege-officiel.png"/><p>Une hypothèque adaptée à votre réalité.</p></div>
+<div class="footer-social"><a href="https://www.facebook.com/equipehypostratege" rel="noopener" target="_blank">Facebook</a><a href="https://www.linkedin.com/in/Marie-joseelepage" rel="noopener" target="_blank">LinkedIn</a></div>
+<div class="planipret-affiliation"><span>Affiliée à</span><img alt="Planiprêt — Cabinet en courtage hypothécaire" src="assets/logo-planipret-officiel.jpg"/></div>
+<nav aria-label="Informations légales" class="footer-legal"><a href="politique-confidentialite.html">Politique de confidentialité</a><a href="mentions-legales.html">Mentions légales</a><a href="politique-temoins.html">Gestion des témoins</a></nav><p class="copyright">© 2026 Équipe Hypostratège. Tous droits réservés.</p>
+</footer>
+<script src="script.js"></script>
+<aside aria-label="Préférences de confidentialité" class="cookie-banner" hidden="" id="cookieBanner"><div><strong>Respect de votre vie privée</strong><p>Nous utilisons uniquement les témoins nécessaires par défaut. Les outils de mesure, comme Google Analytics, ne seront activés qu’après votre consentement et lorsque leurs identifiants officiels auront été configurés.</p></div><div class="cookie-actions"><button class="btn btn-outline" id="rejectAnalytics" type="button">Nécessaires seulement</button><button class="btn btn-gold" id="acceptAnalytics" type="button">Accepter la mesure d’audience</button></div></aside></body></html>
