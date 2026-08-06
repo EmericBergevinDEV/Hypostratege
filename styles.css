@@ -121,3 +121,35 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .form-error{color:#a52620;font-size:12px;margin-top:4px}.invalid{border-color:#a52620!important}.form-status{max-width:700px;margin:12px auto 0;padding:10px;font-size:13px}.form-status.error{background:#fff0ef;color:#7a1611}.form-status.success{background:#eef8f0;color:#1d5d29}
 @media(max-width:760px){.cookie-banner{left:10px;right:10px;bottom:10px;display:block}.cookie-actions{margin-top:14px}.footer-legal{justify-content:flex-start}.legal-header{display:block}.legal-header img{width:160px}.legal-content h1{font-size:40px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* ===== Questionnaire express « Obtenir mon taux » (style nesto) ===== */
+.taux-express{background:var(--navy);padding:70px 5vw}
+.taux-express[hidden]{display:none}
+.tx-card{max-width:720px;margin:0 auto;background:var(--navy2);border:1px solid var(--line);border-radius:18px;padding:40px 38px;box-shadow:var(--shadow)}
+.tx-head .eyebrow{color:var(--gold2)}
+.tx-head h2{color:#fff;margin:6px 0 22px;font:600 30px "Cormorant Garamond",Georgia,serif}
+.tx-progress{height:6px;background:rgba(255,255,255,.12);border-radius:99px;overflow:hidden}
+.tx-bar{display:block;height:100%;width:14%;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:99px;transition:width .35s ease}
+.tx-step-count{color:rgba(255,255,255,.6);font-size:13px;margin:10px 0 26px;letter-spacing:.04em}
+.tx-form{margin:0}
+.tx-step{display:none;border:0;padding:0;margin:0}
+.tx-step.is-active{display:block;animation:txin .35s ease}
+@keyframes txin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.tx-step legend{display:block;width:100%;font:600 23px "Cormorant Garamond",Georgia,serif;color:#fff;padding:0;margin:0 0 20px}
+.tx-options{display:grid;gap:12px}
+.tx-option{text-align:left;padding:17px 20px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.03);color:#fff;font:500 16px Montserrat,Arial,sans-serif;cursor:pointer;transition:border-color .2s,background .2s,transform .08s}
+.tx-option:hover{border-color:var(--gold2);background:rgba(212,154,45,.12)}
+.tx-option:active{transform:scale(.99)}
+.tx-option.is-selected{border-color:var(--gold2);background:rgba(212,154,45,.2)}
+.tx-note{color:rgba(255,255,255,.7);font-size:14px;margin:0 0 18px}
+.tx-fields{display:grid;gap:14px}
+.tx-fields label{display:grid;gap:6px;margin:0;font-size:12px;font-weight:700;letter-spacing:.03em;color:rgba(255,255,255,.8)}
+.tx-fields input{padding:13px 15px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.06);color:#fff;font-size:16px}
+.tx-fields input:focus{outline:none;border-color:var(--gold2);box-shadow:0 0 0 3px rgba(212,154,45,.2)}
+.tx-submit{width:100%;justify-content:center;margin-top:6px}
+.tx-consent{font-size:12px;color:rgba(255,255,255,.6);margin:12px 0 0;text-align:center}
+.tx-nav{margin-top:22px;min-height:1px}
+.tx-back{background:transparent;color:#fff}
+.tx-back[hidden]{display:none}
+.tx-answers{position:absolute;left:-9999px}
+@media(max-width:620px){.tx-card{padding:26px 20px}.tx-head h2{font-size:25px}.tx-step legend{font-size:20px}}
