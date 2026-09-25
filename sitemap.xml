@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.hypostratege.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://www.hypostratege.com/politique-confidentialite.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://www.hypostratege.com/mentions-legales.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://www.hypostratege.com/politique-temoins.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://hypostratege.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://hypostratege.com/services/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://hypostratege.com/preautorisation/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://hypostratege.com/a-propos/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://hypostratege.com/notre-equipe/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://hypostratege.com/avis-clients/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hypostratege.com/calculatrice/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hypostratege.com/nous-joindre/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hypostratege.com/marie-josee-lepage/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hypostratege.com/adam-masse/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hypostratege.com/matis-leger/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://hypostratege.com/politique-confidentialite.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://hypostratege.com/mentions-legales.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://hypostratege.com/politique-temoins.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>
