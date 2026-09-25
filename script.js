@@ -1,8 +1,23 @@
-const menuButton=document.querySelector('.menu-toggle');
-const nav=document.querySelector('.site-header nav');
-menuButton?.addEventListener('click',()=>{const open=nav.classList.toggle('mobile-open');menuButton.setAttribute('aria-expanded',String(open));});
-nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('mobile-open');menuButton?.setAttribute('aria-expanded','false');}));
+// Mobile Navigation Toggle
+const navToggle = document.getElementById('navToggle') || document.querySelector('.nav__toggle') || document.querySelector('.menu-toggle');
+const navLinks = document.getElementById('navLinks') || document.querySelector('.nav__links') || document.querySelector('.site-header nav');
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('is-open');
+    navLinks.classList.toggle('is-open');
+    navLinks.classList.toggle('mobile-open');
+  });
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      navToggle.classList.remove('is-open');
+      navLinks.classList.remove('is-open');
+      navLinks.classList.remove('mobile-open');
+    });
+  });
+}
 
+
+// Calculatrice (utilisée sur /calculatrice/ uniquement)
 const calculator=document.getElementById('mortgageCalculator');
 calculator?.addEventListener('submit',e=>{
   e.preventDefault();
@@ -16,19 +31,9 @@ calculator?.addEventListener('submit',e=>{
   window.HypostrategeAnalytics?.track('calculator_used',{calculator:'mortgage_payment'});
 });
 calculator?.dispatchEvent(new Event('submit',{cancelable:true}));
-document.querySelectorAll('.calc-menu button').forEach(btn=>btn.addEventListener('click',()=>document.getElementById('mortgageCalculator')?.scrollIntoView({behavior:'smooth',block:'center'})));
 
+// Formulaire préautorisation (utilisé sur /preautorisation/ uniquement)
 const preauthForm=document.getElementById('preauthForm');
-const preauthIntro=document.getElementById('preauthIntro');
-const openPreauthButton=document.getElementById('openPreauthButton');
-function openPreauthForm({scroll=true}={}){if(!preauthForm)return;preauthForm.hidden=false;preauthForm.classList.add('is-open');openPreauthButton?.setAttribute('aria-expanded','true');preauthIntro?.classList.add('form-open');window.HypostrategeAnalytics?.track('preauthorization_opened');if(scroll)preauthForm.scrollIntoView({behavior:'smooth',block:'start'});}
-openPreauthButton?.addEventListener('click',()=>openPreauthForm());
-document.querySelectorAll('[data-open-preauth]').forEach(link=>link.addEventListener('click',event=>{event.preventDefault();openPreauthForm({scroll:true});history.replaceState(null,'','#preautorisation');}));
-if(location.hash==='#preautorisation')openPreauthForm({scroll:false});
-
-document.querySelectorAll('a[href^="tel:"]').forEach(a=>a.addEventListener('click',()=>window.HypostrategeAnalytics?.track('contact_click',{method:'phone'})));
-document.querySelectorAll('a[href^="mailto:"]').forEach(a=>a.addEventListener('click',()=>window.HypostrategeAnalytics?.track('contact_click',{method:'email'})));
-
 function clearErrors(form){form.querySelectorAll('.form-error').forEach(e=>e.remove());form.querySelectorAll('.invalid').forEach(e=>e.classList.remove('invalid'));}
 function showError(field,message){field.classList.add('invalid');const d=document.createElement('div');d.className='form-error';d.textContent=message;field.insertAdjacentElement('afterend',d);}
 preauthForm?.addEventListener('submit',e=>{
@@ -41,3 +46,17 @@ preauthForm?.addEventListener('submit',e=>{
   window.HypostrategeAnalytics?.track('preauthorization_submitted');
   const btn=preauthForm.querySelector('button[type="submit"]');if(btn){btn.disabled=true;btn.textContent='Envoi en cours…';}
 });
+
+// Analytics
+document.querySelectorAll('a[href^="tel:"]').forEach(a=>a.addEventListener('click',()=>window.HypostrategeAnalytics?.track('contact_click',{method:'phone'})));
+document.querySelectorAll('a[href^="mailto:"]').forEach(a=>a.addEventListener('click',()=>window.HypostrategeAnalytics?.track('contact_click',{method:'email'})));
+
+// Bannière cookies
+const cookieBanner=document.getElementById('cookieBanner');
+const COOKIE_KEY='hypo_analytics_consent';
+if(cookieBanner){
+  const stored=localStorage.getItem(COOKIE_KEY);
+  if(!stored)cookieBanner.hidden=false;
+  document.getElementById('acceptAnalytics')?.addEventListener('click',()=>{localStorage.setItem(COOKIE_KEY,'accepted');cookieBanner.hidden=true;window.HypostrategeAnalytics?.enable();});
+  document.getElementById('rejectAnalytics')?.addEventListener('click',()=>{localStorage.setItem(COOKIE_KEY,'rejected');cookieBanner.hidden=true;});
+}

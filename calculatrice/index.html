@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="/assets/logo-hypostratege-officiel.png" rel="icon"/>
+<link href="/styles.css" rel="stylesheet"/>
+<title>Calculatrice hypothécaire | Hypostratège</title>
+<meta content="Calculatrice hypothécaire gratuite — estimez votre paiement mensuel, votre capacité d'emprunt, votre mise de fonds et la taxe de bienvenue." name="description"/>
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu principal</a>
+
+<header class="site-header harmonized" style="position:sticky;top:0;z-index:50;">
+  <div class="nav">
+    <a href="/" class="brand">
+      <span class="brand__mark">H</span>
+      <span class="brand__name">Équipe Hypostratège<small>Courtiers hypothécaires</small></span>
+    </a>
+    <button class="nav__toggle" aria-label="Menu" id="navToggle"><span></span><span></span><span></span></button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/services/">Services</a></li>
+      <li><a href="/a-propos/">À propos</a></li>
+      <li><a href="/notre-equipe/">Notre équipe</a></li>
+      <li><a href="/avis-clients/">Avis clients</a></li>
+      <li><a href="/calculatrice/" class="is-active">Calculatrice</a></li>
+      <li><a href="/preautorisation/">Préautorisation</a></li>
+      <li><a href="/nous-joindre/">Nous joindre</a></li>
+      <li class="nav__cta"><a href="https://api.leadconnectorhq.com/widget/booking/7oy24iaE35i8vJyzKGAg" target="_blank" rel="noopener" class="btn--gold">Consultation gratuite</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div style="max-width:var(--max);margin:0 auto;padding:0 28px;">
+    <div class="breadcrumb"><a href="/">Accueil</a> / Calculatrice</div>
+    <h1>Calculatrice hypothécaire</h1>
+    <p>Estimez votre paiement mensuel selon votre situation. Résultat informatif seulement.</p>
+  </div>
+</section>
+
+<main id="contenu">
+<section class="section" style="background:var(--ivory);">
+  <div style="max-width:760px;margin:0 auto;padding:0 28px;">
+    <div style="margin-bottom:32px;">
+      <span class="eyebrow">Outils pratiques</span>
+      <h2>Calculatrice de paiement hypothécaire</h2>
+      <p style="color:var(--muted);">Entrez vos informations ci-dessous pour obtenir une estimation de votre paiement mensuel. Pour une analyse personnalisée, <a href="/preautorisation/">démarrez votre préautorisation</a>.</p>
+    </div>
+    <form class="calculator" id="mortgageCalculator" style="max-width:100%;display:grid;grid-template-columns:1fr 1fr;gap:18px;background:#fff;padding:36px;box-shadow:var(--shadow);border-radius:var(--radius);">
+      <label>Prix d'achat<input id="price" min="0" step="1000" type="number" value="500000"/></label>
+      <label>Mise de fonds<input id="down" min="0" step="1000" type="number" value="100000"/></label>
+      <label>Taux annuel (%)<input id="rate" min="0" step=".01" type="number" value="4.59"/></label>
+      <label>Amortissement<select id="years"><option>15</option><option>20</option><option selected="">25</option><option>30</option></select></label>
+      <button class="btn btn-gold" type="submit" style="grid-column:1/-1;">Calculer</button>
+      <output id="payment" style="grid-column:1/-1;font-family:var(--font-display);font-size:2rem;font-weight:600;color:var(--royal);">Paiement mensuel estimé : —</output>
+      <small style="grid-column:1/-1;color:var(--muted);">Estimation informative seulement. Le calcul final dépend du prêteur et des conditions du dossier.</small>
+    </form>
+
+    <div style="margin-top:48px;text-align:center;background:var(--cloud);padding:36px;border-radius:var(--radius);">
+      <p class="eyebrow">Prochaine étape</p>
+      <h2 style="font-size:clamp(1.6rem,3vw,2.2rem);">Prêt à aller plus loin?</h2>
+      <p style="color:var(--muted);max-width:480px;margin:0 auto 22px;">Notre équipe analyse votre situation réelle et vous propose la meilleure stratégie hypothécaire.</p>
+      <a href="/preautorisation/" class="btn--gold">Démarrer ma préautorisation</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer harmonized">
+    <div style="max-width:var(--max);margin:0 auto;padding:0 28px;">
+      <div class="footer-grid">
+        <div class="footer-brand harmonized">
+          <a href="/" class="brand"><span class="brand__mark">H</span><span class="brand__name">Équipe
+              Hypostratège<small>Courtiers hypothécaires</small></span></a>
+          <p style="margin-top:16px;max-width:34ch;">Une hypothèque adaptée à votre réalité.</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="/">Accueil</a></li>
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/a-propos/">À propos</a></li>
+            <li><a href="/notre-equipe/">Notre équipe</a></li>
+            <li><a href="/avis-clients/">Avis clients</a></li>
+            <li><a href="/calculatrice/">Calculatrice</a></li>
+            <li><a href="/preautorisation/">Préautorisation</a></li>
+            <li><a href="/nous-joindre/">Nous joindre</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Notre équipe</h4>
+          <ul>
+            <li><a href="/marie-josee-lepage/">Marie-Josée Lepage</a></li>
+            <li><a href="/adam-masse/">Adam Massé</a></li>
+            <li><a href="/matis-leger/">Matis Léger</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Nous joindre</h4>
+          <ul>
+            <li><a href="tel:+15147143411">514 714-3411</a></li>
+            <li><a href="mailto:mlepage@planipret.com">mlepage@planipret.com</a></li>
+            <li>425, avenue Mathers, bureau 102<br>Saint-Eustache (Québec) J7P 4C1</li>
+            <li><a href="/nous-joindre/">Formulaire de contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-social" style="margin-top:40px; margin-bottom:20px; display:flex; gap:20px;">
+        <a href="https://www.facebook.com/mariejosee.lepage1" target="_blank" rel="noopener" style="text-decoration:underline;">Facebook</a>
+        <a href="https://www.linkedin.com/in/marie-joseelepage/" target="_blank" rel="noopener" style="text-decoration:underline;">LinkedIn</a>
+      </div>
+      <div class="planipret-affiliation harmonized"><span>Affiliée à</span><img
+          alt="Planiprêt — Cabinet en courtage hypothécaire" src="/assets/logo-planipret-cabinet.png" /></div>
+      <p class="footer-disclaimer-h">Hypostratège est une équipe de courtiers hypothécaires encadrés par l'Autorité des
+        marchés financiers (AMF). Le courtage hypothécaire est offert par l'entremise de PlaniPrêt.</p>
+      <div class="footer-bottom-h">
+        <span>© 2026 Équipe Hypostratège. Tous droits réservés.</span>
+        <span>Conçu au Québec</span>
+      </div>
+    </div>
+  </footer>
+<script>
+var calculator=document.getElementById('mortgageCalculator');
+calculator&&calculator.addEventListener('submit',function(e){
+  e.preventDefault();
+  var price=Number(document.getElementById('price').value)||0;
+  var down=Number(document.getElementById('down').value)||0;
+  var annual=Number(document.getElementById('rate').value)||0;
+  var years=Number(document.getElementById('years').value)||25;
+  var principal=Math.max(0,price-down),r=annual/100/12,n=years*12;
+  var payment=r===0?(n?principal/n:0):principal*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
+  document.getElementById('payment').textContent='Paiement mensuel estimé : '+payment.toLocaleString('fr-CA',{style:'currency',currency:'CAD',maximumFractionDigits:0});
+});
+calculator&&calculator.dispatchEvent(new Event('submit',{cancelable:true}));
+</script>
+<script>
+(function(){
+  var toggle=document.getElementById('navToggle');
+  var links=document.getElementById('navLinks');
+  if(!toggle||!links)return;
+  toggle.addEventListener('click',function(){
+    var open=links.classList.toggle('is-open');
+    toggle.classList.toggle('is-open',open);
+    toggle.setAttribute('aria-expanded',String(open));
+  });
+  links.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
+      links.classList.remove('is-open');
+      toggle.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded','false');
+    });
+  });
+})();
+</script>
+</body></html>
