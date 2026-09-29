@@ -47,9 +47,24 @@ preauthForm?.addEventListener('submit',e=>{
   const btn=preauthForm.querySelector('button[type="submit"]');if(btn){btn.disabled=true;btn.textContent='Envoi en cours…';}
 });
 
-// Analytics
+// Analytics supplémentaires
 document.querySelectorAll('a[href^="tel:"]').forEach(a=>a.addEventListener('click',()=>window.HypostrategeAnalytics?.track('contact_click',{method:'phone'})));
 document.querySelectorAll('a[href^="mailto:"]').forEach(a=>a.addEventListener('click',()=>window.HypostrategeAnalytics?.track('contact_click',{method:'email'})));
+document.querySelectorAll('a[href*="leadconnectorhq"]').forEach(a=>a.addEventListener('click',()=>window.HypostrategeAnalytics?.track('rendez_vous_click')));
+
+// Formulaires génériques
+document.querySelectorAll('form').forEach(form => {
+  let formStarted = false;
+  form.addEventListener('input', () => {
+    if (!formStarted) {
+      window.HypostrategeAnalytics?.track('form_started', { form_id: form.id });
+      formStarted = true;
+    }
+  });
+  form.addEventListener('submit', () => {
+    window.HypostrategeAnalytics?.track('form_submitted', { form_id: form.id });
+  });
+});
 
 // Bannière cookies
 const cookieBanner=document.getElementById('cookieBanner');
